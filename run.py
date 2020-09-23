@@ -107,7 +107,7 @@ def run_bench():
 
     result_fp = open(result_filename, 'w+')
     result_error_fp = open(result_error_filename, 'w+')
-    test_cmd = [TEST_DIR + TEST_NAME, '0', kern_version]
+    test_cmd = ['sudo', TEST_DIR + TEST_NAME, '0', kern_version]
     print('[INFO] Running test with command: ' + ' '.join(test_cmd))
     ret = call(test_cmd, stdout=result_fp, stderr=result_error_fp)
 
